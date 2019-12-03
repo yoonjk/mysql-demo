@@ -1,0 +1,3 @@
+kubectl exec -it $POD -- mysql -uroot -ppassword
+
+POD=`kubectl get pods -l app=mysql | grep Running | grep 1/1 | awk '{print $1}'`
